@@ -1,0 +1,42 @@
+{
+    "name": "MFP Macro Calculator",
+    "version": "1.0",
+    "description": "On the myfitnesspal website, input into this extension nutrition info for 3 food items, calories left and macronutrient ratios, and this extension will calculate the number of servings of each food item needed to fulfill the calories left and macronutrient ratios.",
+    "content_scripts": [ // may not be needed
+        {
+            "matches":[
+                "<all_urls>",
+                "https://www.myfitnesspal.com/food/diary",
+                "https://www.myfitnesspal.com/food/search"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": { // image should be royalty-free
+        "16": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png",
+        "32": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png",
+        "48": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png",
+        "128": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png",
+            "32": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png",
+            "48": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png",
+            "128": "/images/vector-pixel-art-food-bekery-isolated-vector-pixel-art-food-bekery-109521412.png"
+        }
+    },
+    // "options_page": "options.html", // may or may not use
+    "manifest_version": 3
+    // not using "permissions" for now
+    
+    // // don't need; used for programmatically including content script
+    // "host_permissions": [
+    //     "https://www.myfitnesspal.com/food/diary",
+    //     "https://www.myfitnesspal.com/food/search"
+    // ]
+}
