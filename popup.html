@@ -2,7 +2,9 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/popup.css" />
-        <!-- <script type="text/javascript" src="scripts/home.js"></script> -->
+        <script type="text/javascript" src="scripts/diary_pg.js"></script>
+        <script type="text/javascript" src="scripts/search_pg.js"></script>
+        <script type="text/javascript" src="scripts/background.js"></script>
     </head>
 
 <body>
@@ -10,46 +12,47 @@
         <div class="card-header">
             Input (Nutrition Requirements):
         </div>
-        <input id="autofill-nutrition-requirements" class="button" type="button" value="Autofill"/>
+        <input id="autofill-nutrition-requirements" class="button" type="button" value="Autofill"
+                onclick="autofill_input_nutrition_requirements(getElementById(remaining_cals), $(g_carbs), $(g_fat), $(g_protein))"/>
         <table>
             <tr>
                 <td>
-                    <label for="remaining-cal">
+                    <label for="remaining_cal">
                         Remaining Calories:
                     </label>
                 </td>
                 <td>
-                    <input id="remaining-cal" type="text"/>
+                    <input id="remaining_cal" type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="pct_carbs">
+                    <label for="g_carbs">
                         % Carbs:
                     </label>
                 </td>
                 <td>
-                    <input id="pct_carbs" type="text"/>
+                    <input id="g_carbs" type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="pct_fat">
+                    <label for="g_fat">
                         % Fat:
                     </label>
                 </td>
                 <td>
-                    <input id="pct_fat" type="text"/>
+                    <input id="g_fat" type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="pct_protein">
+                    <label for="g_protein">
                         % Protein:
                     </label>
                 </td>
                 <td>
-                    <input id="pct_protein" type="text"/>
+                    <input id="g_protein" type="text"/>
                 </td>
             </tr>
         </table>
