@@ -5,16 +5,23 @@
     "content_scripts": [ // may not be needed
         {
             "matches":[
-                "https://www.myfitnesspal.com/food/diary"
+                "<all_urls>"
             ],
-            "js": ["scripts/diary_pg.js"]
-        },
-        {
-            "matches":[
-                "https://www.myfitnesspal.com/food/search"
-            ],
-            "js": ["scripts/search_pg.js"]
+            "js": ["scripts/content.js"]
         }
+        // // Deprecated:
+        // {
+        //     "matches":[
+        //         "https://www.myfitnesspal.com/food/diary"
+        //     ],
+        //     "js": ["scripts/diary_pg.js"]
+        // },
+        // {
+        //     "matches":[
+        //         "https://www.myfitnesspal.com/food/search"
+        //     ],
+        //     "js": ["scripts/search_pg.js"]
+        // }
     ],
     "background": {
         "service_worker": "scripts/background.js"
@@ -35,7 +42,11 @@
         }
     },
     // "options_page": "options.html", // may or may not use
-    "manifest_version": 3
+    "manifest_version": 3,
+    "permissions": [ // just in case.
+        "tabs",
+        "activeTab"
+    ]
     // not using "permissions" for now
     
     // // don't need; used for programmatically including content script

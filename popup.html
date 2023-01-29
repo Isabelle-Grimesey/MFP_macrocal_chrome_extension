@@ -2,9 +2,19 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/popup.css" />
-        <script type="text/javascript" src="scripts/diary_pg.js"></script>
-        <script type="text/javascript" src="scripts/search_pg.js"></script>
+        <!-- Deprecated: -->
+        <!-- <script type="text/javascript" src="scripts/diary_pg.js"></script>
+        <script type="text/javascript" src="scripts/search_pg.js"></script> -->
+
+        <!-- Did not work - appears I cannot override localhost CSP -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ajax.googleapis.com/*;"></meta> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+        
+        <script type="text/javascript" src="scripts/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="scripts/popup.js"></script>
+
         <script type="text/javascript" src="scripts/background.js"></script>
+        <script type="text/javascript" src="scripts/content.js"></script>
     </head>
 
 <body>
@@ -12,8 +22,16 @@
         <div class="card-header">
             Input (Nutrition Requirements):
         </div>
-        <input id="autofill-nutrition-requirements" class="button" type="button" value="Autofill"
-                onclick="autofill_input_nutrition_requirements(getElementById(remaining_cals), $(g_carbs), $(g_fat), $(g_protein))"/>
+        <input id="autofill-nutrition-requirements" class="button" type="button" value="Autofill">If the button works, this text will change when clicked.</input>
+        <!-- onclick="chrome.tabs.sendMessage();"/> -->
+                <!-- onclick="autofill_input_nutrition_requirements()" -->
+                <!-- getElementById(remaining_cals), $(g_carbs), $(g_fat), $(g_protein) -->
+                <!-- <script>
+                    document.getElementById("autofill-nutrition-requirements").addEventListener('click', function(){
+                        document.getElementById("autofill-nutrition-requirements").innerHTML = "BUTTON WORKS";
+                    })
+                </script> -->
+                
         <table>
             <tr>
                 <td>
@@ -28,7 +46,7 @@
             <tr>
                 <td>
                     <label for="g_carbs">
-                        % Carbs:
+                        g Carbs:
                     </label>
                 </td>
                 <td>
@@ -38,7 +56,7 @@
             <tr>
                 <td>
                     <label for="g_fat">
-                        % Fat:
+                        g Fat:
                     </label>
                 </td>
                 <td>
@@ -48,7 +66,7 @@
             <tr>
                 <td>
                     <label for="g_protein">
-                        % Protein:
+                        g Protein:
                     </label>
                 </td>
                 <td>

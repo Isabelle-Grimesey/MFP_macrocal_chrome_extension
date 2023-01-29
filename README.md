@@ -4,3 +4,4 @@ On the myfitnesspal website, input into this extension nutrition info for 3 food
 Reference:
 - https://blog.bitsrc.io/building-chrome-extensions-101-7baeaa1ec2a5
 - https://anobjectisa.com/?p=410
+- https://plainenglish.io/blog/how-to-send-data-between-chrome-extension-scripts-1182ce67b659
