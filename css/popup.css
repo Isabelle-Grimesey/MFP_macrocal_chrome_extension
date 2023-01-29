@@ -1,0 +1,18 @@
+.input-card{
+    border: 15px solid blue;
+}
+.output-card{
+    border: 15px solid red;
+}
+.card{
+    width: 300px;
+    padding: 50px;
+    margin: 20px;
+    background-color: lightgray;
+}
+.button{
+    background-color: lightyellow;
+}
+.card-header{
+    font-weight: bold;
+}

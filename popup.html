@@ -1,15 +1,240 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- <link rel="stylesheet" type="text/css" href="css/home.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/popup.css" />
         <!-- <script type="text/javascript" src="scripts/home.js"></script> -->
     </head>
 
 <body>
+    <div class="input-card card">
+        <div class="card-header">
+            Input (Nutrition Requirements):
+        </div>
+        <input id="autofill-nutrition-requirements" class="button" type="button" value="Autofill"/>
+        <table>
+            <tr>
+                <td>
+                    <label for="remaining-cal">
+                        Remaining Calories:
+                    </label>
+                </td>
+                <td>
+                    <input id="remaining-cal" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pct_carbs">
+                        % Carbs:
+                    </label>
+                </td>
+                <td>
+                    <input id="pct_carbs" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pct_fat">
+                        % Fat:
+                    </label>
+                </td>
+                <td>
+                    <input id="pct_fat" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pct_protein">
+                        % Protein:
+                    </label>
+                </td>
+                <td>
+                    <input id="pct_protein" type="text"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="input-card card">
+        <div class="card-header">
+            Input (Food 1 Nutrition Facts):
+        </div>
+        <input id="autofill-nutrition-facts-1" class="button" type="button" value="Autofill"/>
+        <table>
+            <tr>
+                <td>
+                    <label for="food-1-name">
+                        Name:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-1-name" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-1-gperserv-carbs">
+                        g carbs per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-1-gperserv-carbs" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-1-gperserv-fat">
+                        g fat per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-1-gperserv-fat" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-1-gperserv-protein">
+                        g protein per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-1-gperserv-protein" type="text"/>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-<h1>My First Heading</h1>
+    <div class="input-card card">
+        <div class="card-header">
+            Input (Food 2 Nutrition Facts):
+        </div>
+        <input id="autofill-nutrition-facts-2" class="button" type="button" value="Autofill"/>
+        <table>
+            <tr>
+                <td>
+                    <label for="food-2-name">
+                        Name:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-2-name" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-2-gperserv-carbs">
+                        g carbs per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-2-gperserv-carbs" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-2-gperserv-fat">
+                        g fat per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-2-gperserv-fat" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-2-gperserv-protein">
+                        g protein per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-2-gperserv-protein" type="text"/>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-<p>My first paragraph.</p>
-
+    <div class="input-card card">
+        <div class="card-header">
+            Input (Food 3 Nutrition Facts):
+        </div>
+        <input id="autofill-nutrition-facts-3" class="button" type="button" value="Autofill"/>
+        <table>
+            <tr>
+                <td>
+                    <label for="food-3-name">
+                        Name:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-3-name" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-3-gperserv-carbs">
+                        g carbs per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-3-gperserv-carbs" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-3-gperserv-fat">
+                        g fat per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-3-gperserv-fat" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-3-gperserv-protein">
+                        g protein per serving:
+                    </label>
+                </td>
+                <td>
+                    <input id="food-3-gperserv-protein" type="text"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="output-card card">
+        <div class="card-header">
+            Output (Number of Servings of Each Food):
+        </div>
+        <input id="calculate" class="button" type="button" value="Calculate"/>
+        <table>
+            <tr>
+                <td>
+                    <label for="food-1-numservings">
+                    </label>
+                </td>
+                <td>
+                    <div id="food-1-numservings" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-2-numservings">
+                    </label>
+                </td>
+                <td>
+                    <div id="food-2-numservings" type="text"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="food-3-numservings">
+                    </label>
+                </td>
+                <td>
+                    <div id="food-3-numservings" type="text"/>
+                </td>
+            </tr>
+        </table>
+        <input id="autofill-output" class="button" type="button" value="Load Results into Page"/>
+    </div>
 </body>
 </html>
